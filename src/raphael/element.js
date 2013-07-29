@@ -410,7 +410,7 @@ R2D3Element.prototype.insertBefore = function(node, before) {
 
 
   // Put the raphael objects in the correct order
-  if (before && r2D3Element.tagName !== 'g') {
+  if (before && r2D3Element.domNode.tagName !== 'g') {
     r2D3Element.raphaelNode.insertBefore(before.raphaelNode);
   }
 
