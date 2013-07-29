@@ -160,9 +160,10 @@
   eve.toString = function() {
     return "You are running Eve " + version;
   };
-  typeof module != "undefined" && module.exports ? module.exports = eve : typeof define != "undefined" ? define("eve", [], function() {
+  /*typeof module != "undefined" && module.exports ? module.exports = eve : typeof define != "undefined" ? define("eve", [], function() {
     return eve;
-  }) : glob.eve = eve;
+  }) : glob.eve = eve;*/
+  glob.eve = eve;
 })(this);
 
 (function() {
@@ -6198,13 +6199,14 @@ window.Raphael.vml && function(R) {
   }
   Expr.setFilters["nth"] = Expr.setFilters["eq"];
   Expr.filters = Expr.pseudos;
-  if (typeof define === "function" && define.amd) {
+  /*if (typeof define === "function" && define.amd) {
     define(function() {
       return Sizzle;
     });
   } else {
     window.Sizzle = Sizzle;
-  }
+  }*/
+  windows.Sizzle = Sizzle;
 })(window);
 
 if (!Array.prototype.map) {
