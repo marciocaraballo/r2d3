@@ -6206,7 +6206,7 @@ window.Raphael.vml && function(R) {
   } else {
     window.Sizzle = Sizzle;
   }*/
-  windows.Sizzle = Sizzle;
+  window.Sizzle = Sizzle;
 })(window);
 
 if (!Array.prototype.map) {
